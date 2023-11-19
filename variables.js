@@ -83,3 +83,67 @@ console.log(`${local}  ${trabajadores}`)
 
 //backtic, mezclar variables y texto
 console.log(`${local} tiene ${trabajadores}`)
+
+
+//NUMEROS
+const numeroVidas=20
+const numeroPuntos="20"
+
+//forma habitual (mal)
+console.log(`Total= ${numeroVidas}+${numeroPuntos}`)
+console.log(`Total= ${numeroVidas+numeroPuntos}`)
+
+
+//forma correcta
+//inicio con el valor int y luego el string
+console.log(`Total= ${+numeroPuntos + +numeroVidas}`)
+
+
+//para sumar dos string: console.log(`Total= ${+numeroPuntos + +numeroVidas}`)
+console.log(3+4*5)
+
+//BOOLEAN
+let saldo1=500
+let saldo2=1000
+
+if (saldo1 > saldo2){
+    console.log("pagar")
+}
+else{
+    console.log("seguir consumiendo")
+}
+
+//mas facil operador ternario
+const respuesta=saldo1>saldo2 ? "pagar":"seguir cosumiendo"
+
+console.log(respuesta)
+
+
+
+//BUCLES
+const tareas=["trabajar", "comer","dormir"]
+
+const usuario={
+    nombre:"maria",
+    skills:true
+}
+
+//t es el iterador de elemtos, i posicion
+tareas.forEach((t,i)=>console.log(t,i))
+
+for (const t of tareas){
+    console.log(t)
+}
+console.log("........")
+
+
+//para objetos
+for (const clave in usuario){
+    console.log(`${usuario[clave]}`)
+}
+console.log(".........")
+
+//map devuelve un nuevo arreglo, entonces es modificable
+const nuevasTareas =tareas.map(t=>t)
+console.log(nuevasTareas)
+
